@@ -1,0 +1,277 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "chain_id",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "chain_step",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "company_name",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "Product__NotOwner",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "category",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "product_id",
+				"type": "bytes32"
+			},
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "parent_contract",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "product_id",
+						"type": "bytes32"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct StepContract.ParentInfo[]",
+				"name": "parent",
+				"type": "tuple[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32",
+				"name": "product_name",
+				"type": "bytes32"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32",
+				"name": "uom",
+				"type": "bytes32"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			}
+		],
+		"name": "emitBatch",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "category",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "product_id",
+				"type": "bytes32"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "file_name",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes1",
+						"name": "hash_function",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "bytes1",
+						"name": "size",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct StepContract.Multihash[]",
+				"name": "multi",
+				"type": "tuple[]"
+			}
+		],
+		"name": "emitHashes",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "i_chain_id",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "i_chain_step",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "i_company_name",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "i_owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "category",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "product_id",
+				"type": "bytes32"
+			},
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "parent_contract",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "product_id",
+						"type": "bytes32"
+					}
+				],
+				"internalType": "struct StepContract.ParentInfo[]",
+				"name": "parent",
+				"type": "tuple[]"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "product_name",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "uom",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			}
+		],
+		"name": "publishBatch",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "category",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "product_id",
+				"type": "bytes32"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "file_name",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes1",
+						"name": "hash_function",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "bytes1",
+						"name": "size",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"internalType": "struct StepContract.Multihash[]",
+				"name": "multi",
+				"type": "tuple[]"
+			}
+		],
+		"name": "storeHash",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
